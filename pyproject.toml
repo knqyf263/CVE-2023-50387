@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cve-2023-50387"
+version = "0.1.0"
+description = ""
+authors = ["knqyf263 <knqyf263@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+cryptography = "^42.0.3"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

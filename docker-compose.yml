@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  attacker:
+    build: ./attacker
+    command: tail -f /dev/null
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.2
+
+  resolver:
+    build: ./resolver
+    volumes:
+      - ./resolver/unbound.conf:/usr/local/etc/unbound/unbound.conf
+      - ./resolver/a.test.key:/usr/local/etc/unbound/a.test.key
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.3
+
+  auth:
+    build: ./auth
+    volumes:
+      - ./auth/named:/etc/default/named
+      - ./auth/named.conf:/var/named/chroot/etc/named.conf
+      - ./auth/a.test.zone.signed:/var/named/chroot/var/named/a.test.zone.signed
+    networks:
+      app_net:
+        ipv4_address: 10.10.0.4
+
+networks:
+  app_net:
+    ipam:
+      config:
+        - subnet: 10.10.0.0/24
+

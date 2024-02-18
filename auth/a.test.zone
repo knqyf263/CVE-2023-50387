@@ -1,0 +1,31 @@
+$TTL    86400
+@       IN      SOA     ns1.a.test. admin.a.test. (
+                              2023102401 ; Serial
+                              3600       ; Refresh
+                              1800       ; Retry
+                              604800     ; Expire
+                              86400 )    ; Negative Cache TTL
+;
+@       IN      NS      ns1.a.test.
+ns1     IN      A       10.10.0.4
+www     IN      A       10.10.0.4
+a       IN      A       10.10.0.4
+b       IN      A       10.10.0.4
+c       IN      A       10.10.0.4
+
+; ksk
+a.test. IN DNSKEY 257 3 14 MzJsFTtAo0j8qGpDIhEMnK4ImTyYwMwDPU5gt/FaXd6TOw6AvZDAj2hl hZvaxMXV6xCw1MU5iPv5ZQrb3NDLUU+TW07imJ5GD9YKi0Qiiypo+zht L4aGaOG+870yHwuY
+; zsk
+a.test. IN DNSKEY 256 3 14 DcYreAh+USsK1mtv7bSR2iaQvShPUqCy7l/BRQXttAFupXp6pUaQZS+k ii+H2JJqd+rS4YgC3KCd/by8yQi5j+WSy2yRprSuFuDyqZMFnDT/Py+n GjmIa59+W1iMdEYb
+
+; colliding keys
+a.test. IN DNSKEY 256 3 14 qz2ys56wu+rPHXp62eskqFa/lYw4xl7oDT5X/wcj7fFapLq8zsOT3kM5E7IlKwa42cIqCcNcb6hG8C8YKWUOgUTOiXPXj7k4SO4K3/+CfFp+7J6ai8shKSFAMvhf2ajl
+a.test. IN DNSKEY 256 3 14 NJAIrXpcToloZ5CnSwyPf/Y8qyL3aFlqFr8Xcw/m19dBcyoJQIak5ygffLTHGrQhZNGM8TrL07v41sL1ZYuYjGBg7RBdMaeQr+JOUA4d5e/r83fkT7uHNOcHzOAhI7Nu
+a.test. IN DNSKEY 256 3 14 UiTl5T9RdFXTul4Nw3rQ9/zlGCODylgcI9mrz5SqpEkxw9+l+E00/JGxAj6If8yjE7Etexs/KTCX7csAYQTLq864iYB+5sPigcMHAzluyPU9fOUmALQbRtw3ZXPHBb7L
+a.test. IN DNSKEY 256 3 14 MjY4X0GT9jf00V9bZU7cMkceFGdUMgbeNK4afF6BB/VznyKXsZlTeX5IgrD/8BNWd1jMvvL5RlbBXbmy5022d34VqReK5IRA6WKxp9uzDBEpc6qoh2npdudDTsFMZKor
+a.test. IN DNSKEY 256 3 14 8y5y+PlI/MQAMADANSuw0UXq7WUGpGr+U+Y4sl+dAu78T+rZ1NUE1TVg5fZU7j7bO+Ie7Mk6DcquNT0zYX986pGJgXpx6jTDh3dztnt9Sc9SBcUdBw0v/u1y72EfLQ2P
+a.test. IN DNSKEY 256 3 14 EUCex5BxNR/cKQUYoHJD1Hj6TK+aMpntzC98Nv+ZegTklzXAxMxC8nAc9VSywVHBjTrkCnVYrY4Gu1YQfscREc+mjbyhUzEMZBHPIEAfuerZwu2wovC4mau3RVWHRhij
+a.test. IN DNSKEY 256 3 14 Mq9Ohq02Xq6D5GprEXuvkZFumkDNmUUEAmKtGG/7FfVeeu3ZMQankbw0eID2p8MB4dcSDotv4YHvx6Sx3t6zdjSFaCloAveMUnvtIQsXL8Kbfm2G0ikVuXtbMSHmFM9w
+a.test. IN DNSKEY 256 3 14 Nd/hhlFfE9YcGAKn/DjwaRDo2x1shj8A59LMXfNuxgPtRH1fT5k9EB1twCTEzqAQNLyx9a6t+Kma/LBXtapxM78FXNaleSnF2fJ40+7rCBnn1cFjvdHEPHkW4XUGToyO
+a.test. IN DNSKEY 256 3 14 CwFzuS5SGumqQwfWNCZPh8tzbSKbOK9xFLrNY4d7lb1R+lK0uV7LEEwuDS6MUyTCwBriYb/Qn5FRkQy0fK2tZcgkPJZxwTCJxWhLYb9U4UrG/1MtaN6JswRRFFxLXA1s
+a.test. IN DNSKEY 256 3 14 u0V+Zd1HiTCxFKFCtZNoPpAM2jMshyc5bZ44qAygKjO2BDEmUibQj0+1nWMphy8E2ouIP6qXkgHorHMd+orHmVwNO8lLc9ho4l48GC3BMwwyE9OGnYbl1Oxi9LDWs+DK
